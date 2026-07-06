@@ -1,0 +1,877 @@
+/* PALETTE DE COULEURS ET POLICES */
+:root {
+    --bg-color: #f4f3ef; /* Fond beige très clair/épuré */
+    --black: #000000;
+    --white: #ffffff;
+    --pink: #ff7ebb;    /* Rose vif moderne */
+    --green: #2ecc71;   /* Vert tech */
+    --orange: #ffb84c;  /* Orange pour la variété */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Arial Black', 'Impact', sans-serif; /* Style de police très gras et carré */
+    color: var(--black);
+    padding: 30px;
+}
+
+/* MENUS / NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    border: 4px solid var(--black);
+    padding: 15px 25px;
+    box-shadow: 8px 8px 0px var(--black);
+    margin-bottom: 40px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 20px;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+/* TITRE DE LA PAGE */
+.main-header h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* STRUCTURE DE LA GRILLE */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* STYLE GÉNÉRAL DES BOITES (CARDS) */
+.main-card, .sub-card {
+    background: var(--white);
+    border: 4px solid var(--black);
+    box-shadow: 8px 8px 0px var(--black);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CARTE RECHERCHE (GAUCHE) */
+.research-section {
+    background: var(--white);
+}
+
+.scan-container {
+    background: var(--black);
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid var(--black);
+    position: relative;
+}
+
+/* Simulation graphique du scanner cérébral */
+.brain-scan-placeholder {
+    width: 180px;
+    height: 180px;
+    border: 2px dashed var(--green);
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, rgba(46,204,113,0.2) 0%, rgba(0,0,0,0) 70%);
+}
+
+.scan-circle {
+    position: absolute;
+    top: 15px; left: 15px; right: 15px; bottom: 15px;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card-content p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-footer .date {
+    font-size: 12px;
+}
+
+.mini-graph {
+    display: flex;
+    gap: 5px;
+}
+
+.bar {
+    width: 15px;
+    border: 2px solid var(--black);
+}
+.bar-pink { height: 25px; background: var(--pink); }
+.bar-green { height: 35px; background: var(--green); }
+
+/* COLONNE DROITE */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.articles-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.article-card {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.green-top { border-top: 12px solid var(--green); }
+.pink-top { border-top: 12px solid var(--pink); }
+
+.article-preview {
+    height: 100px;
+    border: 3px solid var(--black);
+    margin-bottom: 15px;
+}
+.green-gradient { background: linear-gradient(45deg, var(--green), #a3e4d7); }
+.pink-gradient { background: linear-gradient(45deg, var(--pink), #f9d5e5); }
+
+.article-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.article-card p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* BOUTONS STYLE BRUTALISTE */
+.medium-btn {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.medium-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--black);
+}
+
+.btn-green { background: var(--green); }
+.btn-pink { background: var(--pink); }
+
+/* LIGNE DU BAS */
+.bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 30px;
+}
+
+.ethics-card {
+    background: var(--white);
+    padding: 20px;
+    justify-content: space-between;
+    height: 160px;
+}
+
+.ethics-card h2 {
+    font-size: 26px;
+}
+
+.color-stripe-pink {
+    height: 15px;
+    background: var(--pink);
+    border: 3px solid var(--black);
+}
+
+.yonsei-card {
+    background: #0f2537; /* Bleu foncé rappelant l'univers de Yonsei */
+    color: var(--white);
+    padding: 20px;
+    border: 4px solid var(--black);
+    justify-content: space-between;
+}
+
+.yonsei-badge {
+    background: var(--white);
+    color: var(--black);
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+    border: 2px solid var(--black);
+}
+
+.badge-text {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.yonsei-card h3 {
+    font-size: 16px;
+}
+
+/* SECTION COMPÉTENCES (SKILLS) */
+.skills-card {
+    padding: 20px;
+}
+
+.skills-card h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.tag {
+    font-size: 11px;
+    text-align: center;
+    padding: 6px;
+    border: 2px solid var(--black);
+    font-weight: bold;
+}
+
+.green-tag { background: var(--green); }
+.pink-tag { background: var(--pink); }
+.white-tag { background: var(--white); }
+.orange-tag { background: var(--orange); }
+
+/* RESPONSIVE : S'adapte sur les petits écrans */
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .articles-row, .bottom-row {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- COMPLÉMENT DU STYLE POUR LA PAGE ARTICLES --- */
+
+.grid-articles-page {
+    grid-template-columns: 1.2fr 2fr; /* Inversion de proportion pour coller au dessin */
+}
+
+.active-link {
+    text-decoration: underline !important;
+    color: var(--pink) !important;
+}
+
+.left-column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list-item-card {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    padding: 20px;
+    background: var(--white);
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+.list-item-card:hover {
+    transform: scale(1.01) rotate(0.5deg); /* Petit effet de rotation asymétrique */
+}
+
+.list-number {
+    font-size: 32px;
+    font-weight: 900;
+    margin-right: 20px;
+    color: var(--pink);
+}
+
+.list-text h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.list-text p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #555;
+}
+
+.right-column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.medium-blog-banner {
+    background: var(--green) !important;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.medium-blog-banner h2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.articles-row-split {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+.preview-image-card {
+    background: var(--black);
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.style-dark {
+    width: 120px;
+    height: 120px;
+}
+
+.highlight-detail-card {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.highlight-detail-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.highlight-detail-card p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.tags-container-card {
+    padding: 15px 20px;
+}
+
+.tags-container-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* --- COMPLÉMENT DU STYLE POUR LA PAGE RESEARCH --- */
+
+.grid-research-page {
+    grid-template-columns: 2fr 1fr; /* Le projet phare prend plus de place à gauche */
+    margin-bottom: 40px;
+}
+
+.featured-research-card {
+    padding: 25px;
+    background: var(--white);
+    border: 4px solid var(--black);
+    box-shadow: 8px 8px 0px var(--black);
+}
+
+.featured-research-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--black);
+    padding-bottom: 10px;
+}
+
+.research-split-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 25px;
+}
+
+.research-scan {
+    height: 220px;
+    border: 3px solid var(--black);
+    border-radius: 0;
+}
+
+.research-text-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.research-text-details h3 {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.research-meta-tags, .research-date {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.btn-black-brut {
+    background: var(--black) !important;
+    color: var(--white) !important;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.right-column-research {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stats-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+}
+
+.stats-text p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.row-graph {
+    align-items: flex-end;
+    height: 60px;
+}
+
+.methodology-card {
+    padding: 20px;
+    background: var(--black);
+    color: var(--white);
+}
+
+.methodology-card h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--green); /* Vert fluo sur fond noir */
+}
+
+/* SECTION DU BAS (FUTURE THEMES) */
+.future-themes-section {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+}
+
+.future-themes-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.themes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.theme-item {
+    padding: 25px;
+    text-align: center;
+}
+
+.theme-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.theme-item h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.theme-item p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #555;
+}
+
+.theme-pink { background: #fff0f3; }
+.theme-green { background: #e6fffa; }
+.theme-white { background: var(--white); }
+/* --- COMPLÉMENT STYLE POUR LA PAGE RESEARCH PAPER (3 COLONNES) --- */
+
+.paper-main-header {
+    max-width: 1400px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.paper-main-header h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.paper-sub-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+}
+
+.paper-three-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.2fr; /* 3 colonnes asymétriques comme le dessin */
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Colonne Gauche - Auteur */
+.paper-sidebar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.author-card {
+    background: var(--white);
+}
+
+.author-title-banner {
+    background: var(--green);
+    color: var(--black);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 4px solid var(--black);
+}
+
+.author-photo-container {
+    height: 180px;
+    background: #e2e2e2; /* Fond gris par défaut si pas d'image */
+    border-bottom: 4px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.author-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recadre proprement ton image dans le carré */
+}
+
+.author-info-content {
+    padding: 15px;
+}
+
+.author-info-content h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.author-role, .author-email {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.author-social-badge {
+    margin-top: 15px;
+    font-size: 11px;
+    border: 2px dashed var(--black);
+    padding: 5px;
+    text-align: center;
+}
+
+.core-competencies-card {
+    padding: 15px;
+    background: var(--white);
+}
+
+.core-competencies-card h3 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.core-competencies-card p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Colonne Centrale - Texte */
+.paper-content-center-card {
+    padding: 25px;
+    background: var(--white);
+}
+
+.paper-content-center-card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--black);
+    padding-bottom: 5px;
+}
+
+.paper-body-scroll {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #222;
+}
+
+.paper-body-scroll p {
+    margin-bottom: 15px;
+}
+
+.paper-inner-image-block {
+    border: 3px solid var(--black);
+    padding: 15px;
+    margin: 20px 0;
+    background: #fafafa;
+    text-align: center;
+}
+
+.style-paper-scan {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+    background: var(--black);
+}
+
+.image-caption {
+    font-size: 11px;
+    color: #555;
+    font-weight: bold;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+/* Colonne Droite - Références (Foncée) */
+.references-card {
+    background: #111111 !important;
+    color: var(--white);
+    padding: 25px;
+}
+
+.references-card h3 {
+    font-size: 18px;
+    color: var(--pink); /* Rose sur fond noir */
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 5px;
+}
+
+.references-list {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.references-list li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Version mobile */
+@media (max-width: 1000px) {
+    .paper-three-columns-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.section-title-center {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 20px 0 15px 0;
+}
+.paper-section h3 {
+    font-size: 14px;
+    margin: 15px 0 8px 0;
+    text-decoration: underline;
+}
+.paper-keywords {
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 8px;
+    border-left: 3px solid var(--black);
+}
+.paper-section {
+    margin-bottom: 30px;
+}
+/* --- STYLE DE LA PAGE VISION (ASYMÉTRIE MAXIMALE) --- */
+
+.grid-vision-page {
+    grid-template-columns: 2.8fr 1.2fr; /* Bloc gauche très large, bloc droite plus fin */
+    gap: 35px;
+}
+
+.vision-profile-card {
+    background: var(--white);
+    padding: 30px;
+}
+
+.green-banner {
+    background: var(--green);
+    color: var(--black);
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    border: 3px solid var(--black);
+    display: inline-block;
+}
+
+.vision-text-section {
+    margin-bottom: 25px;
+}
+
+.vision-text-section h3 {
+    font-size: 16px;
+    color: var(--green);
+    margin-bottom: 8px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.vision-text-section p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #222;
+}
+
+/* Bloc Engagements */
+.vision-engagements-card {
+    background: var(--white);
+    border: 3px solid var(--pink); /* Bordure rose distincte comme la maquette */
+    padding: 25px;
+}
+
+.engagements-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 5px;
+}
+
+.engagements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.engagements-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.engagement-icon {
+    font-size: 18px;
+    background: #f0f0f0;
+    padding: 5px;
+    border: 2px solid var(--black);
+}
+
+.engagement-details strong {
+    display: block;
+    font-size: 14px;
+    color: var(--black);
+}
+
+/* Responsif pour petits écrans */
+@media (max-width: 900px) {
+    .grid-vision-page {
+        grid-template-columns: 1fr;
+    }
+}
+/* Garde le design de la carte intact tout en la rendant cliquable */
+.card-link-wrapper {
+    text-decoration: none; /* Enlève le soulignement des liens */
+    color: inherit;        /* Conserve les couleurs d'origine du texte */
+    display: block;        /* Permet à toute la surface de la carte d'être cliquable */
+}
