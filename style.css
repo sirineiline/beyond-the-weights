@@ -875,3 +875,105 @@ body {
     color: inherit;        /* Conserve les couleurs d'origine du texte */
     display: block;        /* Permet à toute la surface de la carte d'être cliquable */
 }
+/* ==========================================================================
+   STYLE POUR LES BOUTONS DES ARTICLES MEDIUM
+   ========================================================================== */
+
+/* Style de base commun aux boutons Medium */
+.medium-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: var(--black);
+    border: 3px solid var(--black);
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Bouton pour l'article Vert (Smarter Than Your Doctor) */
+.btn-green {
+    background-color: var(--green);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+/* Bouton pour l'article Rose / Highlight (The Copy-Paste Generation) */
+.btn-pink {
+    background-color: var(--pink);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+/* Effet interactif quand on passe la souris sur les boutons */
+.medium-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--black);
+}
+
+/* Effet quand on clique sur le bouton */
+.medium-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--black);
+}
+
+/* Ajustement pour que les titres des cartes d'articles restent clairs */
+.article-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.article-card p {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+}
+/* Supprime la couleur bleue et le soulignement des liens dans la liste d'articles */
+.list-text h3 a {
+    color: inherit;            /* Prend la couleur noire du texte normal */
+    text-decoration: none;     /* Enlève le soulignement bleu */
+}
+
+/* Optionnel : Si tu veux que le titre devienne un peu opaque ou change légèrement quand on passe la souris dessus */
+.list-text h3 a:hover {
+    color: var(--black);
+    text-decoration: none;     /* Reste non souligné même au survol */
+    opacity: 0.8;
+}
+/* Force les deux cartes d'articles à avoir le même comportement et alignement */
+.articles-row {
+    display: flex;
+    gap: 20px;
+}
+
+.article-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 20px;
+    border: 3px solid var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+.article-badge {
+    background: var(--black);
+    color: var(--white);
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    width: fit-content;
+}
+
+/* Fix pour les sommets colorés des cartes */
+.green-top { border-top: 15px solid var(--green) !important; }
+.pink-top { border-top: 15px solid var(--pink) !important; }
